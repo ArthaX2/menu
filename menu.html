@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Page - FantacyDesigns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@400;500&family=Nunito:wght@400;500&family=Satisfy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="product-card">
+      <h1>Our Menu</h1>
+      <p>Please Enjoy Your Foods</p>
+      <div class="product-pic"></div>
+      <div class="product-colors">
+        <span class="blue active" data-color="#7ed6df" data-pic="url(la1.jpg)"></span>
+        <span class="green" data-color="#badc58" data-pic="url(la2.jpg)"></span>
+        <span class="yellow" data-color="#f9ca24" data-pic="url(la3.jpg)"></span>
+        <span class="rose" data-color="#ff7979" data-pic="url(la4.jpg)"></span>
+        <span class="gray" data-color="rgb(254, 224, 49)" data-pic="url(la5.jpg)"></span>
+        <span class="lavender" data-color="gray" data-pic="url(la6.jpg)"></span>
+      </div>
+      <div class="product-info">
+        <div class="product-price">$90</div>
+        <a href="#" class="product-button">Add to Cart</a>
+      </div>
+    </div>
+ 
+    <script>
+      $(".product-colors span").click(function(){
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $("body").css("background",$(this).attr("data-color"));
+        $(".product-price").css("color",$(this).attr("data-color"));
+        $(".product-button").css("color",$(this).attr("data-color"));
+        $(".product-pic").css("background-image",$(this).attr("data-pic"));
+      });
+    </script>
+  </body>
+</html>
